@@ -1,6 +1,6 @@
 /* styles.css */
 body {
-    font-family: sans-serif; 
+    font-family: serif; 
     background-color: #ffffff; 
     color: #37352f; 
     line-height: 1.6;
@@ -15,8 +15,14 @@ body {
 .container {
     width: 100%;
     max-width: 720px; 
-    padding: 32px 16px; 
+    padding: 32px 16px; /* Default padding for non-mobile views */
     box-sizing: border-box; 
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 32px; /* Increased padding for mobile views */
+    }
 }
 
 h1, h2, h3 {
@@ -24,15 +30,17 @@ h1, h2, h3 {
     width: 100%;
 }
 
+p, ul, li, a {
+    width: 100%;
+}
+
 p {
     margin-bottom: 16px; 
-    width: 100%;
 }
 
 ul {
     padding-left: 20px;
     margin-bottom: 16px; 
-    width: 100%;
 }
 
 ul li {
